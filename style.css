@@ -1,0 +1,209 @@
+body {
+    color: white;
+    font-size: 14px;
+    min-width: 375px;
+    max-width: 1440px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    height: 800px;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(229, 57%, 11%);
+    position: relative;
+}
+
+.container::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+    height: 420px;
+    max-height: 420px;
+    width: 100%;
+    background: url('./images/bg-desktop.svg') no-repeat bottom;
+    border-radius: 210px 0 0 0;
+}
+
+.content {
+    z-index: 10;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 30px;
+}
+
+.content > div {
+    text-align: initial;
+    vertical-align: bottom;
+}
+
+.fylo {
+    display: inline-block;
+    padding: 35px;
+    border-radius: 15px 100px 15px 15px;
+    width: 200px;
+    background-color: hsl(228, 56%, 30%);
+}
+
+.logo > img {
+    height: 35px;
+}
+
+.icon-holder {
+    margin-top: 30px;
+}
+
+.icon {
+    display: inline-block;
+    padding: 12px;
+    height: 22px;
+    width: 20px;
+    border-radius: 10px;
+}
+
+.icon-document {
+    background: url('./images/icon-document.svg') hsl(228, 56%, 0%) no-repeat center center;
+}
+
+.icon-folder {
+    background: url('./images/icon-folder.svg') hsl(228, 56%, 0%) no-repeat center center;
+}
+
+.icon-upload {
+    background: url('./images/icon-upload.svg') hsl(228, 56%, 0%) no-repeat center center;
+}
+
+.storage {
+    display: inline-block;
+    width: 450px;
+    margin-left: 15px;
+    padding: 25px 50px;
+    border-radius: 15px;
+    background-color: hsl(228, 56%, 30%);
+    position: relative;
+}
+
+.progress-holder {
+    height: 15px;
+    padding: 3px;
+    border-radius: 15px 15px;
+    background-color: hsl(228, 56%, 15%);
+}
+
+.progress-bar {
+    height: inherit;
+    width: 75%;
+    border-radius: 15px 15px;
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+
+.progress-ball {
+    height: 10px;
+    width: 10px;
+    float: right;
+    margin: 2px 2px;
+    border-radius: 50px 50px;
+    background-color: white;
+}
+
+.storage-value {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.storage-notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 25px;
+    position: absolute;
+    /* right: 50px;
+    bottom: 80%; */
+    top: 0;
+    right: 0;
+    transform: translate(-50px, -50%);
+    border-radius: 15px 15px;
+    background-color: white;
+}
+
+.storage-notification::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    width: 0;
+    height: 0;
+    border-top: 40px solid white;
+    border-left: 40px solid transparent;
+}
+
+.storage-notification > span {
+    color: #c2c4c0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.storage-notification > span:first-of-type {
+    color: black;
+    font-size: 37px;
+    font-weight: 700;
+    padding: 0 10px 5px 0;
+}
+
+.attribution { font-size: 11px; text-align: center; color: black;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media all and (max-width: 375px) {
+    .container {
+        background: url('./images/bg-mobile.svg') no-repeat;
+        background-size: cover;
+    }
+
+    .container::after {
+        content: none;
+    }
+
+    .content {
+        white-space: unset;
+        overflow: unset;
+    }
+
+    .fylo {
+        width: 80%;
+    }
+
+    .storage {
+        width: 80%;
+        margin: 20px 0 0;
+        padding: 15px 35px 40px;
+    }
+
+    .storage-notification {
+        top: 100%;
+        right: 0;
+        transform: translate(-40%, -50%);
+    }
+
+    .storage-notification::after {
+        content: none;
+    }
+}
