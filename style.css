@@ -35,7 +35,6 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-align: center;
-    margin: 0 30px;
 }
 
 .content > div {
@@ -133,8 +132,6 @@ body {
     align-items: center;
     padding: 10px 25px;
     position: absolute;
-    /* right: 50px;
-    bottom: 80%; */
     top: 0;
     right: 0;
     transform: translate(-50px, -50%);
@@ -183,6 +180,7 @@ body {
     }
 
     .content {
+        margin: 0 30px;
         white-space: unset;
         overflow: unset;
     }
